@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOFILTERS — естетичний центр в Одесі | Манікюр · Подологія · Макіяж</title>
+<meta name="description" content="NOFILTERS — естетичний центр в Одесі. Манікюр, подологія, макіяж. 5.0★ (437 відгуків), 6 років досвіду. вул. Сахарова, 5Б. Запис: 068 456 0888">
+<link rel="canonical" href="https://maliyuigor-blip.github.io/nofilters-estetic/">
+<meta property="og:title" content="NOFILTERS — красота без прикрас">
+<meta property="og:description" content="Манікюр · подологія · макіяж. Одеса, вул. Сахарова, 5Б. 5.0★ (437 відгуків)">
+<meta property="og:image" content="https://maliyuigor-blip.github.io/nofilters-estetic/assets/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b1f2a;          /* глибоке морське чорнило */
+    --ink-2:#12303f;
+    --paper:#f6f3ec;        /* теплий кремовий папір */
+    --card:#ffffff;
+    --accent:#e85d3f;       /* корал/терракота — Одеса-захід сонця */
+    --accent-2:#f2a65a;     /* янтар */
+    --line:#d9d2c2;
+    --muted:#5c6b72;
+    --ease-out:cubic-bezier(.23,1,.32,1);
+    --ease-inout:cubic-bezier(.77,0,.175,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Prata',serif;font-weight:400;line-height:1.12;letter-spacing:-.01em}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--accent);color:#fff}
+
+  /* ---------- top ticker ---------- */
+  .ticker{
+    background:var(--ink);color:var(--paper);
+    overflow:hidden;padding:10px 0;white-space:nowrap;
+  }
+  .ticker__track{display:inline-flex;gap:48px;animation:tick 28s linear infinite;padding-left:24px}
+  .ticker span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:48px}
+  .ticker span::after{content:'✦';color:var(--accent)}
+  @keyframes tick{to{transform:translateX(-50%)}}
+
+  /* ---------- header ---------- */
+  .header{position:sticky;top:0;z-index:60;background:rgba(244,243,234,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .header__in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+  .brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand b{font-family:'Prata',serif;font-size:19px;letter-spacing:.02em}
+  .brand i{font-style:normal;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  .nav{display:flex;gap:28px;align-items:center}
+  .nav a{text-decoration:none;font-size:14px;font-weight:700;color:var(--ink);position:relative;padding:6px 0}
+  .nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .25s var(--ease-out)}
+  .nav a:hover::after{width:100%}
+  .cta{background:var(--ink);color:var(--paper);border:none;border-radius:999px;padding:12px 24px;font-weight:700;font-size:13.5px;text-decoration:none;transition:transform .16s var(--ease-out),background .25s}
+  .cta:hover{background:var(--accent)}
+  .cta:active{transform:scale(.96)}
+  .burger{display:none;background:none;border:1px solid var(--line);width:42px;height:42px;border-radius:12px;cursor:pointer;position:relative}
+  .burger span{display:block;width:18px;height:2px;background:var(--ink);margin:5px auto;transition:.3s var(--ease-out);border-radius:2px}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:88px 0 64px;overflow:hidden}
+  .hero::before{
+    content:'';position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle at 60% 40%,rgba(232,93,63,.18),transparent 65%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:'';position:absolute;left:-80px;bottom:-160px;width:380px;height:380px;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%,rgba(31,48,63,.10),transparent 65%);
+    pointer-events:none;
+  }
+  .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .hero__eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  .hero__eyebrow::before{content:'';width:34px;height:2px;background:var(--accent)}
+  .hero h1{font-size:clamp(42px,5.4vw,72px);line-height:1.02}
+  .hero h1 .outline{
+    color:transparent;-webkit-text-stroke:1.5px var(--ink);display:block;
+  }
+  .hero h1 em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+  .hero h1 em::after{
+    content:'';position:absolute;left:0;right:0;bottom:.08em;height:.14em;background:var(--accent-2);
+    z-index:-1;transform:skewX(-12deg);border-radius:2px;
+  }
+  .hero__lead{margin:26px 0 12px;font-size:17px;color:var(--muted);max-width:480px;font-weight:500}
+  .hero__meta{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:34px}
+  .hero__meta span{display:flex;align-items:center;gap:7px}
+  .hero__meta i{font-style:normal;color:var(--accent)}
+  .hero__row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:17px 32px;font-weight:800;font-size:15px;text-decoration:none;border:none;cursor:pointer;transition:transform .16s var(--ease-out),box-shadow .25s,background .25s}
+  .btn:active{transform:scale(.96)}
+  .btn--solid{background:var(--accent);color:#fff;box-shadow:0 16px 36px -12px rgba(232,93,63,.55)}
+  .btn--solid:hover{background:#d1492c}
+  .btn--ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn--ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .hero__stats{display:flex;gap:0;margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card)}
+  .hero__stat{flex:1;padding:18px 22px;border-right:1px solid var(--line)}
+  .hero__stat:last-child{border-right:none}
+  .hero__stat b{font-family:'Prata',serif;font-size:26px;display:block;color:var(--ink)}
+  .hero__stat span{font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-weight:700}
+  .hero__visual{position:relative}
+  .hero__imgwrap{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:4/4.7;box-shadow:0 40px 80px -30px rgba(11,31,42,.4)}
+  .hero__imgwrap img{width:100%;height:100%;object-fit:cover}
+  .hero__badge{
+    position:absolute;left:-22px;bottom:34px;background:var(--ink);color:var(--paper);
+    border-radius:16px;padding:16px 20px;display:flex;gap:12px;align-items:center;
+    box-shadow:0 22px 44px -14px rgba(11,31,42,.5);animation:float 5.5s ease-in-out infinite;
+  }
+  .hero__badge b{font-family:'Prata',serif;font-size:26px;color:var(--accent-2);line-height:1}
+  .hero__badge span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;max-width:110px;line-height:1.4}
+  .hero__stamp{
+    position:absolute;top:-22px;right:-14px;width:104px;height:104px;
+    border:1.5px dashed var(--accent);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Prata',serif;font-size:13px;color:var(--accent);text-align:center;line-height:1.3;
+    background:rgba(244,243,234,.92);transform:rotate(8deg);animation:spin 34s linear infinite;
+  }
+  .hero__stamp div{animation:spinrev 34s linear infinite}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes spin{to{transform:rotate(368deg)}}
+  @keyframes spinrev{to{transform:rotate(-368deg)}}
+
+  /* ---------- marquee ---------- */
+  .marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding:26px 0}
+  .marquee__track{display:flex;gap:56px;width:max-content;animation:mq 26s linear infinite}
+  .marquee b{font-family:'Prata',serif;font-size:clamp(20px,2.6vw,30px);font-weight:400;white-space:nowrap;display:flex;align-items:center;gap:56px}
+  .marquee b::after{content:'✷';color:var(--accent);font-size:16px}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section{padding:96px 0}
+  .sec__head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:54px}
+  .sec__tag{font-size:11.5px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+  .sec__tag::before{content:'';width:26px;height:2px;background:var(--accent)}
+  .sec__title{font-size:clamp(30px,3.6vw,46px);max-width:640px}
+  .sec__num{font-family:'Prata',serif;font-size:15px;color:var(--muted);letter-spacing:.1em;white-space:nowrap}
+  .sec__num i{font-style:normal;color:var(--accent)}
+
+  /* ---------- services ---------- */
+  .services .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .35s var(--ease-out),box-shadow .35s}
+  .services .card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -24px rgba(11,31,42,.25)}
+  .services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .service__img{aspect-ratio:4/3;overflow:hidden;position:relative}
+  .service__img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-inout)}
+  .services .card:hover .service__img img{transform:scale(1.06)}
+  .service__num{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:800;letter-spacing:.08em}
+  .service__body{padding:26px 26px 28px}
+  .service__body h3{font-size:22px;margin-bottom:10px}
+  .service__body p{font-size:14.5px;color:var(--muted)}
+  .service__price{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;color:var(--accent)}
+  .service__price::after{content:'→';transition:transform .25s var(--ease-out)}
+  .services .card:hover .service__price::after{transform:translateX(6px)}
+
+  /* ---------- about ---------- */
+  .about{background:var(--ink);color:var(--paper)}
+  .about .sec__title{max-width:560px}
+  .about__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about__visual{position:relative}
+  .about__visual img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+  .about__frame{
+    position:absolute;inset:-18px;border:1px dashed rgba(244,243,234,.28);border-radius:30px;z-index:0;
+  }
+  .about__num{display:flex;gap:14px;align-items:center;font-family:'Prata',serif;color:var(--accent-2);font-size:18px;margin:0 0 16px}
+  .about__num b{font-size:44px;line-height:1}
+  .about__content h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:24px}
+  .about__content p{color:rgba(244,243,234,.78);font-size:15.5px;margin-bottom:16px}
+  .about__quote{margin-top:26px;border-left:3px solid var(--accent);padding:18px 22px;background:rgba(255,255,255,.05);border-radius:0 16px 16px 0;font-family:'Prata',serif;font-size:17px;color:var(--accent-2)}
+  .about__rows{margin-top:30px;display:grid;gap:14px}
+  .about__row{display:flex;justify-content:space-between;border-bottom:1px dashed rgba(244,243,234,.2);padding-bottom:12px;font-size:14.5px}
+  .about__row b{font-weight:700}
+  .about__row span{color:rgba(244,243,234,.7)}
+
+  /* ---------- gallery ---------- */
+  .gallery{background:var(--card)}
+  .gallery__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .g-item{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1;cursor:pointer}
+  .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-inout)}
+  .g-item:hover img{transform:scale(1.08)}
+  .g-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,42,.5),transparent 45%);opacity:0;transition:opacity .35s}
+  .g-item:hover::after{opacity:1}
+  .g-item span{position:absolute;left:16px;bottom:14px;color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:.35s var(--ease-out);z-index:2}
+  .g-item:hover span{opacity:1;transform:translateY(0)}
+
+  /* ---------- steps ---------- */
+  .steps__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .step{border:1px solid var(--line);border-radius:20px;padding:28px 24px;background:var(--card);position:relative;transition:transform .35s var(--ease-out)}
+  .step:hover{transform:translateY(-5px)}
+  .step b{font-family:'Prata',serif;font-size:40px;font-weight:400;color:transparent;-webkit-text-stroke:1.4px var(--accent);display:block;margin-bottom:16px;line-height:1}
+  .step h3{font-size:17px;margin-bottom:8px}
+  .step p{font-size:13.5px;color:var(--muted)}
+  .step::after{content:'→';position:absolute;top:26px;right:20px;color:var(--accent-2);font-size:20px}
+  .step:last-child::after{display:none}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--paper)}
+  .reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .review{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+  .review__stars{color:var(--accent-2);letter-spacing:3px;font-size:15px;margin-bottom:14px}
+  .review p{font-size:14.5px;color:var(--muted);font-weight:500}
+  .review__author{display:flex;align-items:center;gap:12px;margin-top:20px}
+  .review__ava{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--accent-2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
+  .review__author b{font-size:14px;display:block}
+  .review__author span{font-size:12px;color:var(--muted)}
+
+  /* ---------- CTA ---------- */
+  .cta-sec{background:var(--ink);color:var(--paper);position:relative;overflow:hidden}
+  .cta-sec::before{content:'';position:absolute;inset:0;background:
+    radial-gradient(600px 360px at 80% 20%,rgba(232,93,63,.22),transparent 60%),
+    radial-gradient(500px 340px at 10% 90%,rgba(242,166,90,.14),transparent 60%);pointer-events:none}
+  .cta__in{position:relative;text-align:center;max-width:700px;margin:0 auto}
+  .cta__in h2{font-size:clamp(32px,4.4vw,54px);margin-bottom:18px}
+  .cta__in p{color:rgba(244,243,234,.75);font-size:16px;margin-bottom:36px}
+  .cta__row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn--light{background:var(--paper);color:var(--ink)}
+  .btn--light:hover{background:#fff}
+  .btn--outline-light{background:transparent;color:var(--paper);border:1.5px solid rgba(244,243,234,.5)}
+  .btn--outline-light:hover{border-color:var(--accent);color:var(--accent)}
+  .cta__note{margin-top:22px;font-size:13px;color:rgba(244,243,234,.5)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);border-top:1px solid rgba(244,243,234,.12);color:rgba(244,243,234,.6);padding:40px 0 46px;font-size:13.5px}
+  .foot__in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer a{color:rgba(244,243,234,.6);text-decoration:none}
+  footer a:hover{color:var(--accent-2)}
+  .foot__brand{font-family:'Prata',serif;font-size:17px;color:var(--paper)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{transition:none;transform:none;opacity:1}
+    .ticker__track,.marquee__track,.hero__badge,.hero__stamp{animation:none}
+  }
+
+
+  /* ---------- mobile menu ---------- */
+  .mobile-menu{
+    position:fixed;inset:0;z-index:80;display:flex;align-items:flex-start;justify-content:flex-end;
+    pointer-events:none;opacity:0;transition:opacity .3s var(--ease-out);
+  }
+  .mobile-menu.open{opacity:1;pointer-events:auto}
+  .mobile-menu__backdrop{
+    position:absolute;inset:0;background:rgba(11,31,42,.6);backdrop-filter:blur(4px);
+    transform:translateX(100%);transition:transform .3s var(--ease-out);
+  }
+  .mobile-menu.open .mobile-menu__backdrop{transform:translateX(0)}
+  .mobile-menu__panel{
+    position:relative;width:100%;max-width:340px;min-height:100vh;
+    background:var(--paper);border-left:1px solid var(--line);
+    padding:24px 24px 40px;display:flex;flex-direction:column;
+    transform:translateX(100%);transition:transform .35s var(--ease-out);
+    box-shadow:-20px 0 60px -20px rgba(11,31,42,.3);
+  }
+  .mobile-menu.open .mobile-menu__panel{transform:translateX(0)}
+  .mobile-menu__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+  .mobile-menu__brand{color:var(--ink);text-decoration:none}
+  .mobile-menu__brand b{font-family:'Prata',serif;font-size:17px}
+  .mobile-menu__brand i{font-style:normal;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .mobile-menu__close{width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--card);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+  .mobile-menu__close:hover{background:var(--ink);color:var(--paper)}
+  .mobile-menu__nav{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex:1}
+  .mobile-menu__nav a{font-size:18px;font-weight:700;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line);transition:color .2s}
+  .mobile-menu__nav a:hover{color:var(--accent)}
+  .mobile-menu__cta{width:100%;margin-bottom:24px;text-align:center}
+  .mobile-menu__meta{display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:var(--muted);padding-top:16px;border-top:1px solid var(--line)}
+  .mobile-menu__meta a{color:var(--muted);text-decoration:none}
+  .mobile-menu__meta a:hover{color:var(--accent)}
+  .mobile-menu__meta i{font-style:normal;color:var(--accent)}
+
+  /* Fix ticker/marquee overflow on mobile */
+  @media (max-width:860px){
+    .ticker,.marquee{overflow:hidden}
+    .ticker__track,.marquee__track{animation:none}
+    .ticker span,.marquee b{display:none}
+  }
+
+  /* Improve hero on mobile */
+  @media (max-width:560px){
+    .hero{padding:72px 0 48px}
+    .hero__grid{gap:32px}
+    .hero h1{font-size:clamp(34px,8vw,54px)}
+    .hero__lead{font-size:15px}
+    .hero__row{gap:10px}
+    .btn{padding:15px 24px;font-size:14px}
+    .hero__stats{margin-top:32px;border-radius:14px}
+    .hero__stat{padding:14px 16px}
+    .hero__stat b{font-size:22px}
+    .hero__badge{left:12px;bottom:-16px;padding:14px 16px}
+    .hero__stamp{width:72px;height:72px;font-size:10px}
+    .hero__imgwrap{border-radius:18px;aspect-ratio:4/4.5}
+  }
+
+  /* Better touch targets on mobile */
+  @media (max-width:860px){
+    .cta{padding:14px 28px;font-size:14px}
+    .mobile-menu__cta{padding:16px 28px;font-size:15px}
+    .mobile-menu__nav a{padding:18px 0}
+    .service__body{padding:22px}
+    .review{padding:24px}
+  }
+
+  /* Ensure no horizontal overflow from animations */
+  html,body{overflow-x:clip}
+  .ticker,.marquee{overflow-x:clip}
+
+  /* Fix hero badge positioning on small screens */
+  @media (max-width:400px){
+    .hero__badge{left:8px;padding:12px 14px}
+    .hero__badge b{font-size:20px}
+    .hero__badge span{font-size:10px;max-width:90px}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1024px){
+    .hero__grid{grid-template-columns:1fr;gap:44px}
+    .about__grid{grid-template-columns:1fr;gap:44px}
+    .about__frame{display:none}
+  }
+  @media (max-width:860px){
+    .nav{display:none}
+    .burger{display:block}
+    .services__grid,.reviews__grid{grid-template-columns:1fr 1fr}
+    .steps__grid{grid-template-columns:1fr 1fr}
+    .gallery__grid{grid-template-columns:1fr 1fr}
+    .g-item:nth-child(3){display:none}
+  }
+  @media (max-width:560px){
+    section{padding:72px 0}
+    .services__grid,.reviews__grid,.steps__grid{grid-template-columns:1fr}
+    .hero__stats{flex-direction:column}
+    .hero__stat{border-right:none;border-bottom:1px solid var(--line)}
+    .hero__stat:last-child{border-bottom:none}
+    .hero__badge{left:14px;bottom:-18px}
+    .hero__stamp{width:86px;height:86px;font-size:11px}
+    .gallery__grid{grid-template-columns:1fr 1fr}
+  }
+
+  /* Hide ticker and marquee on mobile to avoid overflow and distraction */
+  @media (max-width:860px){
+    .ticker, .marquee { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker"><div class="ticker__track">
+  <span>Одеса · вул. Сахарова, 5Б</span><span>5.0 ★ 437 відгуків</span><span>6 років досвіду</span><span>запис: 068 456 0888</span>
+  <span>Одеса · вул. Сахарова, 5Б</span><span>5.0 ★ 437 відгуків</span><span>6 років досвіду</span><span>запис: 068 456 0888</span>
+</div></div>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a href="#" class="brand"><b>NOFILTERS</b><i>естетичний центр</i></a>
+    <nav class="nav">
+      <a href="#services">Послуги</a>
+      <a href="#about">Про нас</a>
+      <a href="#gallery">Роботи</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <a href="tel:+380684560888" class="cta">Записатися</a>
+    <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<!-- MOBILE MENU PANEL -->
+<div id="mmenu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Мобільне меню">
+  <div class="mobile-menu__backdrop" aria-hidden="true"></div>
+  <div class="mobile-menu__panel">
+    <div class="mobile-menu__header">
+      <div class="brand mobile-menu__brand"><b>NOFILTERS</b><i>естетичний центр</i></div>
+      <button class="mobile-menu__close" aria-label="Закрити меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav">
+      <a href="#services">Послуги</a>
+      <a href="#about">Про нас</a>
+      <a href="#gallery">Роботи</a>
+      <a href="#reviews">Відгуки</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+    <a href="tel:+380684560888" class="mobile-menu__cta btn btn--solid">Записатися: 068 456 0888</a>
+    <div class="mobile-menu__meta">
+      <span><i>★</i> 5.0 · 437 відгуків</span>
+      <span>вул. Сахарова, 5Б, Одеса</span>
+      <a href="https://instagram.com/nofilters_od" target="_blank" rel="noopener">@nofilters_od</a>
+    </div>
+  </div>
+</div>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero__grid">
+    <div>
+      <div class="hero__eyebrow reveal">Одеса · естетичний центр</div>
+      <h1 class="reveal">
+        Краса
+        <em>без фільтрів</em>
+        <span class="outline">— просто ти</span>
+      </h1>
+      <p class="hero__lead reveal">Манікюр, подологія та макіяж в одному місці. Шість років повертаємо одеситам природну впевненість — без зайвого, без прикрас.</p>
+      <div class="hero__meta reveal">
+        <span><i>★</i> 5.0 рейтинг</span>
+        <span>437 відгуків</span>
+        <span>вул. Сахарова, 5Б</span>
+      </div>
+      <div class="hero__row reveal">
+        <a href="tel:+380684560888" class="btn btn--solid">Записатися: 068 456 0888</a>
+        <a href="#services" class="btn btn--ghost">Що ми робимо</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div class="hero__stat"><b>6</b><span>років успіху</span></div>
+        <div class="hero__stat"><b>3</b><span>напрями</span></div>
+        <div class="hero__stat"><b>5.0</b><span>рейтинг</span></div>
+      </div>
+    </div>
+    <div class="hero__visual reveal">
+      <div class="hero__imgwrap">
+        <img src="assets/hero.jpg" alt="NOFILTERS — естетичний центр в Одесі">
+      </div>
+      <div class="hero__badge">
+        <b>06</b>
+        <span>років поряд з вами</span>
+      </div>
+      <div class="hero__stamp"><div>Одеса<br>№1 *<br>еітика</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee__track">
+  <b>Манікюр</b><b>Подологія</b><b>Макіяж</b><b>Nail care</b><b>SPA-догляд</b><b>Косметологія</b>
+  <b>Манікюр</b><b>Подологія</b><b>Макіяж</b><b>Nail care</b><b>SPA-догляд</b><b>Косметологія</b>
+</div></div>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec__head reveal">
+      <div>
+        <div class="sec__tag">Послуги</div>
+        <h2 class="sec__title">Три напрями — одна турбота про вас</h2>
+      </div>
+      <div class="sec__num"><i>01</i> / 03</div>
+    </div>
+    <div class="services__grid">
+      <article class="card reveal">
+        <div class="service__img">
+          <img src="assets/manicure.jpg" alt="Манікюр">
+          <span class="service__num">01</span>
+        </div>
+        <div class="service__body">
+          <h3>Манікюр</h3>
+          <p>Апаратний та класичний, гель-лак, SPA-догляд для рук і нігтів. Рівний контур, міцне покриття, здорова кутикула.</p>
+          <span class="service__price">детальніше</span>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="service__img">
+          <img src="assets/manicure.jpg" alt="Подологія">
+          <span class="service__num">02</span>
+        </div>
+        <div class="service__body">
+          <h3>Подологія</h3>
+          <p>Здоров'я стоп: медичний педикюр, догляд за врослим нігтем, мозолі та тріщини. Працюємо акуратно й безболісно.</p>
+          <span class="service__price">детальніше</span>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="service__img">
+          <img src="assets/manicure2.jpg" alt="Макіяж">
+          <span class="service__num">03</span>
+        </div>
+        <div class="service__body">
+          <h3>Макіяж</h3>
+          <p>Денний, вечірній, весільний. Індивідуальний підбір тонів під ваш тип, стійка текстура, натуральний результат.</p>
+          <span class="service__price">детальніше</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap about__grid">
+    <div class="about__visual reveal">
+      <div class="about__frame"></div>
+      <img src="assets/hero.jpg" alt="NOFILTERS — про центр">
+    </div>
+    <div class="about__content">
+      <div class="sec__tag reveal">Про нас</div>
+      <h2 class="reveal">Красота без прикрас</h2>
+      <p class="reveal">NOFILTERS — команда майстрів, які об'єднали косметологію, nail-мистецтво та макіяж. Ми не продаємо фільтри — ми повертаємо природну красу, підкреслену професійним доглядом.</p>
+      <p class="reveal">Шість років ми робимо те, що любимо, — і одесити довіряють нам найцінніше: свій час і своє обличчя.</p>
+      <div class="about__quote reveal">«Ви вже прекрасні. Ми просто відкриваємо це.»</div>
+      <div class="about__rows reveal">
+        <div class="about__row"><b>Локація</b><span>вул. Сахарова, 5Б, Одеса</span></div>
+        <div class="about__row"><b>Години роботи</b><span>щодня 10:00 — 20:00</span></div>
+        <div class="about__row"><b>Instagram</b><span>@nofilters_od</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="wrap">
+    <div class="sec__head reveal">
+      <div>
+        <div class="sec__tag">Роботи</div>
+        <h2 class="sec__title">Наші руки пам'ятають кожну клієнтку</h2>
+      </div>
+      <div class="sec__num"><i>02</i> / 03</div>
+    </div>
+    <div class="gallery__grid reveal">
+      <div class="g-item"><img src="assets/manicure.jpg" alt="Манікюр робота"><span>Манікюр</span></div>
+      <div class="g-item"><img src="assets/manicure2.jpg" alt="Макіяж робота"><span>Макіяж</span></div>
+      <div class="g-item"><img src="assets/hero.jpg" alt="Салон"><span>Атмосфера</span></div>
+      <div class="g-item"><img src="assets/manicure.jpg" alt="Робота"><span>Гель-лак</span></div>
+      <div class="g-item"><img src="assets/manicure2.jpg" alt="Робота"><span>Вечірній</span></div>
+      <div class="g-item"><img src="assets/hero.jpg" alt="Салон"><span>Інтерєр</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="steps">
+  <div class="wrap">
+    <div class="sec__head reveal">
+      <div>
+        <div class="sec__tag">Як потрапити</div>
+        <h2 class="sec__title">Від дзвінка — до результату</h2>
+      </div>
+      <div class="sec__num"><i>03</i> / 03</div>
+    </div>
+    <div class="steps__grid">
+      <div class="step reveal"><b>01</b><h3>Зателефонуйте</h3><p>068 456 0888 — або напишіть нам в Instagram.</p></div>
+      <div class="step reveal"><b>02</b><h3>Оберіть час</h3><p>Підберемо зручне вікно, підкажемо по процедурі.</p></div>
+      <div class="step reveal"><b>03</b><h3>Прийдіть</h3><p>вул. Сахарова, 5Б — вже готові до вашої зустрічі.</p></div>
+      <div class="step reveal"><b>04</b><h3>Насолоджуйтесь</h3><p>Результат, якому ви радітимете щодня.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="sec__head reveal">
+      <div>
+        <div class="sec__tag">Відгуки</div>
+        <h2 class="sec__title">Що кажуть клієнтки</h2>
+      </div>
+      <div class="sec__num"><i>5.0 ★</i> середня оцінка</div>
+    </div>
+    <div class="reviews__grid">
+      <article class="review reveal">
+        <div class="review__stars">★★★★★</div>
+        <p>Найкращий манікюр в Одесі, однозначно. Майстерка чує все, покриття тримає три тижні і більше. Рекомендую всім подругам.</p>
+        <div class="review__author"><div class="review__ava">АК</div><div><b>Аліна К.</b><span>клієнтка з 2021</span></div></div>
+      </article>
+      <article class="review reveal">
+        <div class="review__stars">★★★★★</div>
+        <p>Ходила з проблемною нігтикою до інших — не допомагало. Тут за три візити вирішили питання повністю. Дякую за професіоналізм!</p>
+        <div class="review__author"><div class="review__ava">МВ</div><div><b>Марина В.</b><span>подологія</span></div></div>
+      </article>
+      <article class="review reveal">
+        <div class="review__stars">★★★★★</div>
+        <p>Макіяж на весілля — вау. Природний, стійкий, я забула про нього до вечора. Відчуваклонула себе справжньою.</p>
+        <div class="review__author"><div class="review__ava">СК</div><div><b>Софія К.</b><span>весільний макіяж</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta-sec">
+  <div class="wrap cta__in">
+    <div class="sec__tag reveal" style="justify-content:center">Запис</div>
+    <h2 class="reveal">Готова до змін?</h2>
+    <p class="reveal">Один дзвінок — і вже завтра ви з тим самим відображенням, що вас радує. Без фільтрів, без прикрас.</p>
+    <div class="cta__row reveal">
+      <a href="tel:+380684560888" class="btn btn--light"><span>+380 68 456 08 88</span></a>
+      <a href="https://instagram.com/nofilters_od" class="btn btn--outline-light" target="_blank" rel="noopener">Instagram @nofilters_od</a>
+    </div>
+    <p class="cta__note reveal">вул. Сахарова, 5Б, Одеса · щодня 10:00 — 20:00 · відповідаємо протягом 30 хв у робочий день</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot__in">
+    <div class="foot__brand">NOFILTERS</div>
+    <div>© 2026 Естетичний центр NOFILTERS · Одеса</div>
+    <div><a href="https://instagram.com/nofilters_od" target="_blank" rel="noopener">@nofilters_od</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger');
+  var mobileMenu=document.getElementById('mmenu');
+  var closeBtn=mobileMenu ? mobileMenu.querySelector('.mobile-menu__close') : null;
+  var backdrop=mobileMenu ? mobileMenu.querySelector('.mobile-menu__backdrop') : null;
+  var links=mobileMenu ? mobileMenu.querySelectorAll('.mobile-menu__nav a') : [];
+  var open=false;
+
+  function setOpen(v){
+    open=v;
+    burger.classList.toggle('open',open);
+    burger.setAttribute('aria-expanded',open);
+    mobileMenu.classList.toggle('open',open);
+    mobileMenu.setAttribute('aria-hidden',!open);
+    document.body.style.overflow=open?'hidden':'';
+  }
+
+  if(burger){
+    burger.addEventListener('click',function(){setOpen(!open);});
+  }
+  if(closeBtn){
+    closeBtn.addEventListener('click',function(){setOpen(false);});
+  }
+  if(backdrop){
+    backdrop.addEventListener('click',function(){setOpen(false);});
+  }
+  links.forEach(function(l){
+    l.addEventListener('click',function(){setOpen(false);});
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && open){setOpen(false);}
+  });
+
+  var reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){io.observe(el);});
+  }else{
+    reveals.forEach(function(el){el.classList.add('visible');});
+  }
+})();
+  var burger=document.getElementById('burger');
+  var nav=document.querySelector('.nav');
+  var open=false;
+  if(burger){
+    burger.addEventListener('click',function(){open=!open;burger.classList.toggle('open',open);burger.setAttribute('aria-expanded',open);});
+  }
+  var reveals=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+      });
+    },{threshold:0.12});
+    reveals.forEach(function(el){io.observe(el);});
+  }else{
+    reveals.forEach(function(el){el.classList.add('visible');});
+  }
+})();
+</script>
+</body>
+</html>
+<!-- updated at 2026-08-08T09:54:28Z -->
+
+<!-- updated at 2026-08-08T09:54:40Z -->
+
+<!-- updated at 2026-08-08T09:55:04Z -->
